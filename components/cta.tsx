@@ -1,4 +1,6 @@
+'use client'
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function CTA() {
   return (
@@ -11,9 +13,11 @@ export default function CTA() {
           Empowering individuals with AI-driven support, predictive insights, and secure prescriptions. Join ReLive
           and build a healthier, relapse-free future.
         </p>
-        <Button size="lg" className="mt-4">
-          Start Your Journey
-        </Button>
+        <Link href="/onboarding">
+          <Button size="lg" className="mt-4">
+            Start Your Journey
+          </Button>
+        </Link>
       </div>
     </section>
   )

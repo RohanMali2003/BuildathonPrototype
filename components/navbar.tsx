@@ -13,7 +13,6 @@ export default function Navbar() {
           <Link href="/prescriptions" className="transition-colors hover:text-primary">
             My Prescriptions
           </Link>
-
           <Link href="/chatbot" className="transition-colors hover:text-primary">
             Chat with AI
           </Link>
