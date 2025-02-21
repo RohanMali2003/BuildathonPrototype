@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Select } from '@/components/ui/select'
-import { Button } from '@/components/ui/button'
 
 interface BasicInfoStepProps {
   data: {
@@ -49,7 +48,7 @@ export default function BasicInfoStep({
         <Input
           id="age"
           type="number"
-          {...register("age", { 
+          {...register("age", {
             required: "Age is required",
             min: { value: 18, message: "Must be 18 or older" }
           })}

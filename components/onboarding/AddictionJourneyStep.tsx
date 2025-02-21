@@ -1,7 +1,6 @@
 'use client'
 
 import { useForm } from 'react-hook-form'
-import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Label } from '@/components/ui/label'
@@ -23,11 +22,10 @@ export default function AddictionJourneyStep({
   updateFields,
   onNext,
 }: AddictionJourneyStepProps) {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: data
   })
 
-  const hadRelapse = watch('hadRelapse')
 
   const onSubmit = (formData: AddictionJourneyStepProps['data']) => {
     updateFields(formData)

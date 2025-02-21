@@ -20,7 +20,7 @@ export default function PrivacyStep({
   updateFields,
   onNext,
 }: PrivacyStepProps) {
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: data
   })
 

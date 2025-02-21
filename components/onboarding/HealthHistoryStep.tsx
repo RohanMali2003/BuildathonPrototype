@@ -1,7 +1,6 @@
 'use client'
 
 import { useForm } from 'react-hook-form'
-import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Label } from '@/components/ui/label'
@@ -24,7 +23,7 @@ export default function HealthHistoryStep({
   updateFields,
   onNext,
 }: HealthHistoryStepProps) {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm({
+  const { register, handleSubmit, watch } = useForm({
     defaultValues: data
   })
 
@@ -92,7 +91,7 @@ export default function HealthHistoryStep({
       </div>
 
       {/* <div className="flex justify-end"> */}
-        {/* <Button type="submit">Next</Button> */}
+      {/* <Button type="submit">Next</Button> */}
       {/* </div> */}
     </form>
   )

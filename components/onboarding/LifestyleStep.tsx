@@ -1,8 +1,6 @@
 'use client'
 
 import { useForm } from 'react-hook-form'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
@@ -24,7 +22,7 @@ export default function LifestyleStep({
   updateFields,
   onNext,
 }: LifestyleStepProps) {
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: data
   })
 
