@@ -10,13 +10,16 @@ export default function Navbar() {
           <span className="font-bold">ReLive</span>
         </Link>
         <nav className="flex flex-1 items-center space-x-6 text-sm font-medium">
+          <Link href="/dashboard" className="transition-colors hover:text-primary">
+            Dashboard
+          </Link>
           <Link href="/prescriptions" className="transition-colors hover:text-primary">
             My Prescriptions
           </Link>
           <Link href="/chatbot" className="transition-colors hover:text-primary">
             Chat with AI
           </Link>
-          <Link href="/about" className="transition-colors hover:text-primary">
+          <Link href="https://docs.google.com/presentation/d/1ITZDRjiCUzMF_g_-1QC-or_0GGXeB0s__rYWMFnI5t4/edit?usp=sharing" className="transition-colors hover:text-primary">
             About Us
           </Link>
         </nav>

@@ -10,13 +10,15 @@ import {
     Calendar,
     Settings,
     Bell,
+    Pill,
     User
 } from 'lucide-react'
 
 const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Health Tracking', href: '/dashboard/health', icon: Activity },
-    { name: 'AI Assistant', href: '/dashboard/chat', icon: MessageSquare },
+    { name: 'AI Assistant', href: '/chatbot', icon: MessageSquare },
+    { name: 'My Prescriptions', href: '/prescriptions', icon: Pill },
     { name: 'Schedule', href: '/dashboard/schedule', icon: Calendar },
     { name: 'Settings', href: '/dashboard/settings', icon: Settings },
 ]

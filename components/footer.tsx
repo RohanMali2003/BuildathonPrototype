@@ -10,10 +10,10 @@ export default function Footer() {
                     secure prescriptions, and personalized coping strategies.
                 </p>
                 <div className="flex space-x-6">
-                    <Link href="/ReLive-Presentation.pdf" className="text-muted-foreground transition-colors hover:text-primary">
+                    <Link href="https://docs.google.com/presentation/d/1ITZDRjiCUzMF_g_-1QC-or_0GGXeB0s__rYWMFnI5t4/edit?usp=sharing" className="text-muted-foreground transition-colors hover:text-primary">
                         Project Presentation
                     </Link>
-                    <Link href="https://youtube.com/your-video-link" className="text-muted-foreground transition-colors hover:text-primary">
+                    <Link href="https://www.youtube.com/@0080ROHANMALI" className="text-muted-foreground transition-colors hover:text-primary">
                         Watch Demo
                     </Link>
                 </div>

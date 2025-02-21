@@ -45,17 +45,17 @@ export default function Chatbot() {
 
             <div className="relative z-10">
                 <Navbar />
-                <div className="container mx-auto max-w-2xl px-4 py-16">
-                    <h1 className="text-center text-3xl font-bold text-foreground">AI Chatbot</h1>
-                    <p className="text-center text-muted-foreground">Your 24/7 Peer Support Companion</p>
+                <div className="container mx-auto max-w-4xl px-6 py-20">
+                    <h1 className="text-center text-4xl font-bold text-foreground">AI Chatbot</h1>
+                    <p className="text-center text-lg text-muted-foreground">Your 24/7 Peer Support Companion</p>
 
-                    {/* Chatbox */}
-                    <div className="mt-6 space-y-4 rounded-lg bg-background p-6 shadow-lg ring-1 ring-border/30">
-                        <div className="h-96 overflow-y-auto space-y-4">
+                    {/* Chatbox - Bigger height, more padding */}
+                    <div className="mt-8 space-y-6 rounded-lg bg-background p-8 shadow-lg ring-1 ring-border/30">
+                        <div className="h-[600px] overflow-y-auto space-y-4">
                             {messages.map((msg, index) => (
                                 <div
                                     key={index}
-                                    className={`p-3 rounded-lg max-w-xs ${msg.sender === "bot"
+                                    className={`p-4 rounded-lg max-w-md ${msg.sender === "bot"
                                         ? "bg-blue-500/90 text-white self-start"
                                         : "bg-muted text-foreground self-end ml-auto"
                                         }`}
@@ -65,17 +65,17 @@ export default function Chatbot() {
                             ))}
                         </div>
 
-                        {/* Input Box */}
-                        <div className="flex gap-2">
+                        {/* Input Box - More padding */}
+                        <div className="flex gap-3">
                             <input
                                 type="text"
-                                className="flex-1 rounded-lg border bg-background p-3 text-foreground placeholder-muted-foreground outline-none"
+                                className="flex-1 rounded-lg border bg-background p-4 text-lg text-foreground placeholder-muted-foreground outline-none"
                                 placeholder="Type a message..."
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                             />
                             <button
-                                className="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 transition"
+                                className="rounded-lg bg-blue-500 px-6 py-3 text-lg text-white hover:bg-blue-600 transition"
                                 onClick={handleSend}
                             >
                                 Send
