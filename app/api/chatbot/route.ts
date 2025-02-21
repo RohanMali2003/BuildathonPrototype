@@ -1,25 +1,40 @@
-import { NextResponse } from "next/server"
+import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
     try {
-        const { message } = await req.json()
+        console.log("Loaded Hugging Face API Key:", process.env.HUGGINGFACE_API_KEY);
 
-        const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${process.env.DEEPSEEK_API_KEY}`,
-            },
-            body: JSON.stringify({
-                model: "deepseek-chat",
-                messages: [{ role: "user", content: message }],
-            }),
-        })
+        const { message } = await req.json();
 
-        const data = await response.json()
-        return NextResponse.json({ reply: data.choices[0].message.content })
+        const response = await fetch(
+            "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
+                },
+                body: JSON.stringify({
+                    inputs: message,
+                    parameters: { max_new_tokens: 200 },
+                }),
+            }
+        );
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`API Error: ${errorText}`);
+        }
+
+        const data = await response.json();
+
+        if (!data || !data.length || !data[0]?.generated_text) {
+            throw new Error("Invalid response from Hugging Face API");
+        }
+
+        return NextResponse.json({ reply: data[0].generated_text });
     } catch (error) {
-        console.error("Error:", error)
-        return NextResponse.json({ reply: "Sorry, I couldn't process that." })
+        console.error("Error:", error);
+        return NextResponse.json({ reply: "Sorry, something went wrong." });
     }
 }
