@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 ReLive – Empowering Addiction Recovery with AI & Wearable Tech  
 
-## Getting Started
+[![Built With](https://img.shields.io/badge/Built%20With-React-blue)](https://reactjs.org/) [![Database](https://img.shields.io/badge/Database-influxDB-green)](https://www.influxdata.com/) [![Blockchain](https://img.shields.io/badge/Blockchain-Hyperledger%20Fabric-lightgrey)](https://www.hyperledger.org/use/fabric)  
 
-First, run the development server:
+## 📜 **Project Overview**  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**ReLive** is an AI-driven recovery platform designed to enhance public healthcare accessibility, focusing on rural healthcare, affordability, and emergency response systems. It uses continuous monitoring from wearables, AI-powered relapse predictions, and blockchain-backed prescription verification to offer just-in-time interventions and gamified recovery support.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 **Features**  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🔍 **Personalized Onboarding**: Tailored recovery plans based on initial assessments.  
+- 📊 **Real-time Monitoring**: Tracks biometrics, smartphone behavior, and GPS triggers.  
+- 🧠 **AI Relapse Prediction**: Predicts risk patterns using federated learning for user privacy.  
+- 🚨 **Just-in-Time Interventions**: Instant support through AI chat, coping strategies, and emergency alerts.  
+- 🎮 **Gamified Progress**: Earn rewards for completing recovery milestones.  
+- 🔒 **Blockchain Prescription Verification**: Secure, tamper-proof medication prescriptions.  
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Live Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ReLive is live! 🚀 Experience the platform here: [https://buildathon-prototype.vercel.app/]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+1. Click **"Start Your Journey"** on the homepage to begin the onboarding questionnaire.  
+2. Complete the questions to help personalize your recovery journey.  
+3. Access real-time insights, personalized interventions, and track your milestones.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚧 Under Development
+
+ReLive is still a work in progress. We're actively building new features and refining the platform to enhance user experience. Stay tuned for exciting updates coming soon!
+
+---
